@@ -1,0 +1,10 @@
+.git
+.gitignore
+.DS_Store
+*.log
+firebase-debug.log
+node_modules
+_prototype
+assets
+backups
+*.zip

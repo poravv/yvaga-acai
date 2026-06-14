@@ -1,0 +1,41 @@
+# ===== Yvága Açai — root =====
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+firebase-debug.log
+firebase-debug.*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencias y builds (por si se ejecutan desde la raíz)
+node_modules/
+dist/
+.astro/
+
+# Variables de entorno / secretos
+.env
+.env.*
+!.env.example
+
+# Editores / IDE
+.vscode/
+.idea/
+*.swp
+
+# Material fuente (capturas, mockups, renders) — pesado, no se versiona
+/assets/
+backups/
+
+# Artefactos de despliegue
+yvaga-acai-cpanel.zip
+*.zip
+
+# Prototipo original (referencia local, no se publica)
+/_prototype/
+/template

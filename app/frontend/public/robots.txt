@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yvaga-acai.mindtechpy.net/sitemap-index.xml

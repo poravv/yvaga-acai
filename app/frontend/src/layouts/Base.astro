@@ -1,0 +1,98 @@
+---
+import { CONTACT, CATALOG } from "../data/catalog.js";
+import "../styles/global.css";
+
+const {
+  title = "Yvága Açai — Açaí, helados y bowls frescos | Pedí por WhatsApp",
+  description = "Yvága Açai: açaí cremoso, helados artesanales y bowls frescos preparados al momento con ingredientes naturales. El sabor tropical que te lleva al cielo. Pedí por WhatsApp.",
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site).href;
+
+// JSON-LD: negocio local de comida → mejora visibilidad en Google y motores de IA.
+const menuSchema = CATALOG.map((c) => ({
+  "@type": "MenuSection",
+  name: c.name,
+  hasMenuItem: c.items.map((it) => ({
+    "@type": "MenuItem",
+    name: it.name,
+    ...(it.desc ? { description: it.desc } : {}),
+    ...(it.price != null ? { offers: { "@type": "Offer", price: it.price, priceCurrency: "PYG" } } : {}),
+  })),
+}));
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  name: "Yvága Açai",
+  description,
+  url: canonical,
+  servesCuisine: ["Açaí", "Helados", "Postres"],
+  priceRange: "₲₲",
+  telephone: "+" + CONTACT.whatsapp,
+  address: { "@type": "PostalAddress", addressCountry: "PY", addressLocality: "Paraguay" },
+  openingHoursSpecification: [
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "22:00" },
+    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday", "Sunday"], opens: "10:00", closes: "23:00" },
+  ],
+  hasMenu: { "@type": "Menu", hasMenuSection: menuSchema },
+};
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#240a36" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:title" content="Yvága Açai — El sabor tropical que te lleva al cielo" />
+    <meta property="og:description" content="Açaí, helados artesanales y bowls frescos preparados al momento. Pedí por WhatsApp." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <slot />
+
+    <script>
+      // Reveal-on-scroll global para todos los elementos .reveal (islas y estático).
+      const reveal = () => {
+        const els = document.querySelectorAll(".reveal:not(.in)");
+        if (!("IntersectionObserver" in window)) {
+          els.forEach((e) => e.classList.add("in"));
+          return;
+        }
+        const io = new IntersectionObserver(
+          (entries) =>
+            entries.forEach((en) => {
+              if (en.isIntersecting) {
+                en.target.classList.add("in");
+                io.unobserve(en.target);
+              }
+            }),
+          { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+        );
+        els.forEach((e) => io.observe(e));
+      };
+      // Reintenta tras hidratar las islas, para capturar su markup recién montado.
+      reveal();
+      window.addEventListener("load", reveal);
+      setTimeout(reveal, 600);
+    </script>
+  </body>
+</html>

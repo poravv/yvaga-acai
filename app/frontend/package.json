@@ -1,0 +1,26 @@
+{
+  "name": "yvaga-acai-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Yvága Açai · landing estática (Astro + React islands) — açaí, helados y bowls frescos en Paraguay",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.2.0",
+    "@astrojs/sitemap": "^3.6.0",
+    "@nanostores/react": "^0.8.4",
+    "astro": "^5.16.2",
+    "nanostores": "^0.11.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
+  }
+}
