@@ -53,6 +53,12 @@ Estado al **2026-06-14**. Marcar `[x]` al completar.
 - [x] **Menú mobile**: burger togglea (abre/cierra con X), botón WhatsApp sin desbordar.
 - [x] Sección **"Así armamos tu açaí"**: relleno continuo del vaso por scroll
       (clip-path), anclado (sticky) también en mobile.
+- [x] **Hero con producto real**: bochas de açaí (`acai.png`) en el orbe.
+- [x] **Story v2**: fondo monocromático (mismo vaso en grayscale) → efecto
+      gris→color; alineación perfecta sin halo; borde de relleno con **relieve
+      cóncavo** (clipPath SVG) que cubre la punta al completarse; fondo
+      decorativo (glows + frutas) para no sentirse vacía.
+- [x] **Aureola del cursor** açaí (sutil, sigue al puntero; oculta en touch).
 
 ## Notas de operación
 
