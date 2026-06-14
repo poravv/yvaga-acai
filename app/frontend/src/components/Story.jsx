@@ -33,8 +33,10 @@ export default function Story() {
   const fill = clamp01((p - 0.03) / 0.9);
   // Borde del relleno con relieve: una curva (superficie del líquido) que sube con el llenado,
   // en vez de una línea recta. Coordenadas 0..1 (objectBoundingBox) para que sea responsive.
-  const y = 1 - fill;
-  const dome = 0.04; // curvatura cóncava de la superficie (la panza entra hacia adentro)
+  const dome = 0.045; // curvatura cóncava de la superficie (la panza entra hacia adentro)
+  // Desplazamos el nivel hacia arriba según el llenado para que, al completarse,
+  // la muesca cóncava igual cubra la punta del fondo (sobrepasa ligeramente).
+  const y = (1 - fill) - dome * fill;
   const fillPath = `M0,${y.toFixed(4)} Q0.5,${(y + dome).toFixed(4)} 1,${y.toFixed(4)} L1,1 L0,1 Z`;
 
   return (
