@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Fruit } from "../lib/icons.jsx";
 
 const STORY_STEPS = [
   { n: "01", t: "Leche en polvo", d: "Primero entra la capa sola de leche en polvo como base clara." },
@@ -30,20 +31,41 @@ export default function Story() {
   const stage = Math.min(STORY_STEPS.length - 1, Math.floor(p * STORY_STEPS.length));
   // El vaso lleno se revela de abajo hacia arriba, gradual y acompañando los pasos.
   const fill = clamp01((p - 0.03) / 0.9);
+  // Borde del relleno con relieve: una curva (superficie del líquido) que sube con el llenado,
+  // en vez de una línea recta. Coordenadas 0..1 (objectBoundingBox) para que sea responsive.
+  const y = 1 - fill;
+  const dome = 0.04; // curvatura cóncava de la superficie (la panza entra hacia adentro)
+  const fillPath = `M0,${y.toFixed(4)} Q0.5,${(y + dome).toFixed(4)} 1,${y.toFixed(4)} L1,1 L0,1 Z`;
 
   return (
     <section className="story" id="story" ref={ref} style={{ height: "300vh" }}>
       <div className="story-sticky">
+        <div className="story-bg" aria-hidden="true">
+          <span className="story-glow sg1"></span>
+          <span className="story-glow sg2"></span>
+          <span className="story-grain"></span>
+          <span className="story-fruit sf1"><Fruit.berry /></span>
+          <span className="story-fruit sf2"><Fruit.leaf /></span>
+          <span className="story-fruit sf3"><Fruit.drop /></span>
+          <span className="story-fruit sf4"><Fruit.berry /></span>
+        </div>
         <div className="wrap">
           <div className="story-grid">
             <div className="story-visual cup-float">
+              <svg width="0" height="0" aria-hidden="true" style={{ position: "absolute" }}>
+                <defs>
+                  <clipPath id="storyFillClip" clipPathUnits="objectBoundingBox">
+                    <path d={fillPath} />
+                  </clipPath>
+                </defs>
+              </svg>
               <div className="glass">
-                <img className="cup-img cup-ghost" src="/assets/story/cup-empty.png" alt="" />
+                <img className="cup-img cup-ghost" src="/assets/story/cup-ready.png" alt="" />
                 <img
                   className="cup-img cup-fill"
                   src="/assets/story/cup-ready.png"
                   alt="Açaí Yvága armado por capas"
-                  style={{ clipPath: `inset(${(1 - fill) * 100}% 0% 0% 0%)` }}
+                  style={{ clipPath: "url(#storyFillClip)", WebkitClipPath: "url(#storyFillClip)" }}
                 />
               </div>
             </div>
