@@ -69,6 +69,35 @@ const jsonLd = {
   <body>
     <slot />
 
+    <div class="cursor-orb" aria-hidden="true"></div>
+
+    <script>
+      // Círculo açaí que sigue al cursor con suavizado (solo en dispositivos con mouse).
+      (() => {
+        const orb = document.querySelector(".cursor-orb");
+        if (!orb || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        let mx = innerWidth / 2, my = innerHeight / 2, ox = mx, oy = my, raf = null;
+        const tick = () => {
+          ox += (mx - ox) * 0.3; oy += (my - oy) * 0.3;
+          orb.style.transform = `translate(${ox}px, ${oy}px) translate(-50%, -50%)`;
+          if (Math.abs(mx - ox) > 0.1 || Math.abs(my - oy) > 0.1) raf = requestAnimationFrame(tick);
+          else raf = null;
+        };
+        addEventListener("mousemove", (e) => {
+          mx = e.clientX; my = e.clientY; orb.classList.add("on");
+          if (!raf) raf = requestAnimationFrame(tick);
+        }, { passive: true });
+        document.addEventListener("mouseleave", () => orb.classList.remove("on"));
+        addEventListener("mousedown", () => orb.classList.add("tap"));
+        addEventListener("mouseup", () => orb.classList.remove("tap"));
+        // Crece sobre elementos interactivos.
+        document.addEventListener("mouseover", (e) => {
+          orb.classList.toggle("hot", !!e.target.closest("a, button, .mtab, .cat, .pcard, .promo"));
+        }, { passive: true });
+      })();
+    </script>
+
     <script>
       // Reveal-on-scroll global para todos los elementos .reveal (islas y estático).
       const reveal = () => {

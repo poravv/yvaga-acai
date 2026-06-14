@@ -462,3 +462,16 @@ p { margin: 0; }
 .wa-fab:hover { transform: scale(1.08); }
 .wa-fab svg { width: 30px; height:30px; }
 @media (max-width: 940px){ .wa-fab { bottom: 18px; right: 18px; } }
+
+/* ===== Aureola del cursor (sutil, el cursor real queda en el centro) ===== */
+.cursor-orb {
+  position: fixed; top: 0; left: 0; width: 40px; height: 40px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,245,61,.30) 0%, rgba(154,55,201,.22) 42%, transparent 70%);
+  pointer-events: none; z-index: 9999; opacity: 0;
+  transition: opacity .35s ease, width .3s ease, height .3s ease;
+  will-change: transform;
+}
+.cursor-orb.on { opacity: 1; }
+.cursor-orb.hot { width: 56px; height: 56px; }
+.cursor-orb.tap { width: 30px; height: 30px; }
+@media (hover: none), (pointer: coarse) { .cursor-orb { display: none; } }
