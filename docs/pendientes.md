@@ -9,6 +9,9 @@ Estado al **2026-06-14**. Marcar `[x]` al completar.
 - [ ] **URLs reales de redes** (Instagram, TikTok, Facebook) — hoy son `#`
       en `CONTACT.instagram/tiktok/facebook`.
 - [ ] **Confirmar número de WhatsApp** (+595 992 424757) y horarios.
+- [ ] **Completar datos del titular** en las páginas legales (razón social,
+      RUC, domicilio): hoy son placeholders `[completar]` en
+      `src/pages/{terminos,privacidad}.astro`. Revisar con un profesional legal.
 - [ ] **Dominio de producción**: definir el real y actualizar:
   - `app/frontend/astro.config.mjs` → `site`
   - `app/frontend/public/robots.txt` → `Sitemap:`
@@ -59,6 +62,12 @@ Estado al **2026-06-14**. Marcar `[x]` al completar.
       cóncavo** (clipPath SVG) que cubre la punta al completarse; fondo
       decorativo (glows + frutas) para no sentirse vacía.
 - [x] **Aureola del cursor** açaí (sutil, sigue al puntero; oculta en touch).
+- [x] **Páginas legales**: Términos, Privacidad y Cookies (+ links en footer y
+      banner de cookies). Fix nginx `absolute_redirect off` (evita /terminos →
+      redirect sin puerto).
+- [x] **Carrito pide el nombre** del cliente y lo envía en el mensaje de WhatsApp
+      (antes "Mi nombre es:" iba vacío). Botón se deshabilita sin nombre.
+- [x] **Story mobile** mejor estructurado (vaso más grande/centrado).
 
 ## Notas de operación
 
