@@ -74,7 +74,7 @@ export default function Story() {
 
             <div className="story-steps">
               <span className="kicker on-dark">Así armamos tu açaí</span>
-              <div style={{ marginTop: 14, minHeight: 220 }}>
+              <div className="story-step-box">
                 {STORY_STEPS.map((s, i) => (
                   <div key={s.n} className="story-step" style={{ display: i === stage ? "block" : "none" }}>
                     <div className="story-step-num">{s.n}</div>
