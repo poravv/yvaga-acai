@@ -4,20 +4,28 @@ import { atom, computed } from "nanostores";
 import { CONTACT } from "../data/catalog.js";
 
 const STORAGE_KEY = "yvaga_cart";
+const NAME_KEY = "yvaga_name";
 
 function readInitial() {
   if (typeof localStorage === "undefined") return [];
   try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); } catch { return []; }
 }
+function readName() {
+  if (typeof localStorage === "undefined") return "";
+  try { return localStorage.getItem(NAME_KEY) || ""; } catch { return ""; }
+}
 
 export const $items = atom(readInitial());
 export const $cartOpen = atom(false);
 export const $toast = atom(null);
+export const $name = atom(readName());
+export const setName = (n) => $name.set(n);
 
 export const $count = computed($items, (items) => items.reduce((s, i) => s + i.qty, 0));
 export const $total = computed($items, (items) => items.reduce((s, i) => s + (i.price || 0) * i.qty, 0));
 
 if (typeof window !== "undefined") {
+  $name.subscribe((n) => { try { localStorage.setItem(NAME_KEY, n); } catch { /* no disponible */ } });
   $items.subscribe((items) => {
     try { localStorage.setItem(STORAGE_KEY, JSON.stringify(items)); } catch { /* almacenamiento no disponible */ }
   });
@@ -61,7 +69,7 @@ export function remove(id) {
 export const openCart = () => $cartOpen.set(true);
 export const closeCart = () => $cartOpen.set(false);
 
-export function waLink(items, total) {
+export function waLink(items, total, name = "") {
   const fmt = (n) => new Intl.NumberFormat("es-PY").format(n) + " Gs";
   let msg = "¡Hola Yvága Açai! 🫐 Quiero hacer este pedido:%0A%0A";
   items.forEach((it) => {
@@ -69,6 +77,6 @@ export function waLink(items, total) {
     msg += encodeURIComponent(line) + "%0A";
   });
   msg += "%0A" + encodeURIComponent(`Total: ${fmt(total)}`);
-  msg += "%0A%0A" + encodeURIComponent("Mi nombre es: ");
+  msg += "%0A%0A" + encodeURIComponent(`Mi nombre es: ${name}`.trim());
   return `https://wa.me/${CONTACT.whatsapp}?text=${msg}`;
 }

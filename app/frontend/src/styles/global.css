@@ -451,7 +451,13 @@ p { margin: 0; }
 .cart-total { display:flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
 .cart-total span { color: var(--ink-soft); font-size: 14px; }
 .cart-total b { font-family: var(--font-display); font-size: 30px; color: var(--acai); }
+.cart-name { display:block; margin-bottom: 14px; }
+.cart-name span { display:block; font-size: 13px; font-weight: 700; color: var(--ink-soft); margin-bottom: 6px; }
+.cart-name input { width: 100%; padding: 13px 14px; border-radius: 14px; border: 1.5px solid rgba(29,15,36,.16); background: var(--crema); font-size: 15px; color: var(--ink); transition: border-color .2s, box-shadow .2s; }
+.cart-name input:focus { outline: none; border-color: var(--acai-bright); box-shadow: 0 0 0 3px rgba(154,55,201,.18); }
 .cart-foot .btn-wa { width: 100%; padding: 17px; font-size: 16px; }
+.cart-foot .btn-wa.is-disabled { opacity: .55; cursor: not-allowed; filter: grayscale(.3); }
+.cart-foot .btn-wa.is-disabled:hover { transform: none; }
 .cart-note { text-align:center; font-size: 12px; color: var(--ink-soft); margin-top: 12px; }
 
 /* toast */

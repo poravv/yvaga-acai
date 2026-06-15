@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import { useStore } from "@nanostores/react";
 import { I, gs } from "../lib/icons.jsx";
-import { $items, $total, $cartOpen, $toast, closeCart, setQty, remove, waLink } from "../store/cart.js";
+import { $items, $total, $cartOpen, $toast, $name, setName, closeCart, setQty, remove, waLink } from "../store/cart.js";
 
 export default function CartUI() {
   const items = useStore($items);
   const total = useStore($total);
   const open = useStore($cartOpen);
   const toast = useStore($toast);
+  const name = useStore($name);
 
   useEffect(() => {
     const onKey = (e) => { if (e.key === "Escape") closeCart(); };
@@ -58,11 +59,28 @@ export default function CartUI() {
               ))}
             </div>
             <div className="cart-foot">
+              <label className="cart-name">
+                <span>Tu nombre</span>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="¿A nombre de quién es el pedido?"
+                  autoComplete="name"
+                />
+              </label>
               <div className="cart-total"><span>Total estimado</span><b>{gs(total)}</b></div>
-              <a className="btn btn-wa" href={waLink(items, total)} target="_blank" rel="noopener">
+              <a
+                className={"btn btn-wa" + (name.trim() ? "" : " is-disabled")}
+                href={name.trim() ? waLink(items, total, name.trim()) : undefined}
+                target="_blank"
+                rel="noopener"
+                aria-disabled={!name.trim()}
+                onClick={(e) => { if (!name.trim()) { e.preventDefault(); e.currentTarget.closest(".cart-foot").querySelector("input")?.focus(); } }}
+              >
                 <I.whatsapp style={{ width: 22, height: 22 }} /> Enviar pedido por WhatsApp
               </a>
-              <p className="cart-note">Te respondemos para confirmar disponibilidad y entrega.</p>
+              <p className="cart-note">{name.trim() ? "Te respondemos para confirmar disponibilidad y entrega." : "Ingresá tu nombre para enviar el pedido."}</p>
             </div>
           </>
         )}
