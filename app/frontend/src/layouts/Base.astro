@@ -71,6 +71,29 @@ const jsonLd = {
 
     <div class="cursor-orb" aria-hidden="true"></div>
 
+    <div class="cookie-bar" id="cookieBar" hidden>
+      <p>
+        Usamos almacenamiento local para recordar tu carrito y este aviso. No usamos cookies de
+        seguimiento. <a href="/cookies/">Más info</a>.
+      </p>
+      <button type="button" id="cookieOk" class="btn btn-lima">Entendido</button>
+    </div>
+
+    <script>
+      // Aviso de cookies: se muestra si no fue aceptado antes (almacenamiento local).
+      (() => {
+        const bar = document.getElementById("cookieBar");
+        if (!bar) return;
+        let ok = false;
+        try { ok = localStorage.getItem("yvaga_cookie_ok") === "1"; } catch {}
+        if (!ok) bar.hidden = false;
+        document.getElementById("cookieOk")?.addEventListener("click", () => {
+          try { localStorage.setItem("yvaga_cookie_ok", "1"); } catch {}
+          bar.hidden = true;
+        });
+      })();
+    </script>
+
     <script>
       // Círculo açaí que sigue al cursor con suavizado (solo en dispositivos con mouse).
       (() => {

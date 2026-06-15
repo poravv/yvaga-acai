@@ -1,0 +1,61 @@
+---
+import Legal from "../layouts/Legal.astro";
+import { CONTACT } from "../data/catalog.js";
+---
+
+<Legal
+  title="Política de Cookies"
+  description="Uso de cookies y almacenamiento local en el sitio de Yvága Açai."
+  updated="14 de junio de 2026"
+>
+  <p>
+    Esta política explica cómo <strong>Yvága Açai</strong> usa cookies y tecnologías de
+    almacenamiento similares en su sitio.
+  </p>
+
+  <h2>1. Qué son</h2>
+  <p>
+    Las cookies son pequeños archivos que un sitio guarda en tu dispositivo. El
+    "almacenamiento local" (localStorage) cumple una función parecida, guardando datos en tu
+    navegador sin enviarlos automáticamente al servidor.
+  </p>
+
+  <h2>2. Qué usamos nosotros</h2>
+  <ul>
+    <li>
+      <strong>Almacenamiento local (esencial):</strong> guardamos el contenido de tu
+      <em>carrito</em> (clave <code>yvaga_cart</code>) para que no se pierda al navegar o
+      recargar, y una marca de que viste este aviso (clave <code>yvaga_cookie_ok</code>).
+      Estos datos quedan solo en tu dispositivo.
+    </li>
+    <li>
+      <strong>No usamos cookies de publicidad ni de seguimiento</strong> de terceros (por
+      ejemplo, analítica o píxeles de redes) en esta versión del sitio.
+    </li>
+  </ul>
+
+  <h2>3. Servicios de terceros</h2>
+  <p>
+    Al tocar "Pedir por WhatsApp" se abre WhatsApp, que puede usar sus propias cookies según
+    su política. Las tipografías se cargan desde Google Fonts, que puede registrar la solicitud
+    de la fuente.
+  </p>
+
+  <h2>4. Cómo gestionarlas</h2>
+  <p>
+    Podés borrar el almacenamiento local y las cookies desde la configuración de tu navegador
+    (sección de privacidad / datos de sitios). Si borrás el almacenamiento, se vaciará tu
+    carrito.
+  </p>
+
+  <h2>5. Cambios</h2>
+  <p>
+    Si en el futuro incorporamos analítica u otras cookies, actualizaremos esta política y, si
+    corresponde, te pediremos tu consentimiento. Ver también nuestra
+    <a href="/privacidad/">Política de Privacidad</a>.
+  </p>
+
+  <p class="legal-note">
+    ¿Consultas? Escribinos por WhatsApp al {CONTACT.whatsappDisplay}.
+  </p>
+</Legal>

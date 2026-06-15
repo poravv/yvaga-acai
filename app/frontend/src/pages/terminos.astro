@@ -1,0 +1,82 @@
+---
+import Legal from "../layouts/Legal.astro";
+import { CONTACT } from "../data/catalog.js";
+---
+
+<Legal
+  title="Términos y Condiciones"
+  description="Términos y condiciones de uso del sitio y del servicio de pedidos de Yvága Açai."
+  updated="14 de junio de 2026"
+>
+  <p>
+    Estos Términos y Condiciones regulan el uso del sitio web de <strong>Yvága Açai</strong>
+    (en adelante, "el sitio") y la realización de pedidos a través del mismo. Al usar el sitio
+    o realizar un pedido, aceptás estos términos.
+  </p>
+
+  <h2>1. Quiénes somos</h2>
+  <p>
+    Yvága Açai es un emprendimiento de venta de açaí, helados artesanales y productos
+    relacionados en Paraguay. Datos del responsable: <em>[Razón social / nombre del titular]</em>,
+    RUC <em>[completar]</em>, domicilio <em>[completar]</em>. Contacto:
+    WhatsApp {CONTACT.whatsappDisplay}.
+  </p>
+
+  <h2>2. Pedidos</h2>
+  <ul>
+    <li>El sitio funciona como catálogo. Los pedidos se realizan y confirman por <strong>WhatsApp</strong>; el carrito solo arma un mensaje con tu selección.</li>
+    <li>El pedido no se considera confirmado hasta que recibís nuestra respuesta confirmando disponibilidad, precio final, forma de entrega y tiempos.</li>
+    <li>Nos reservamos el derecho de rechazar o cancelar pedidos por falta de stock, error de precio o cualquier causa razonable, informándote por el mismo medio.</li>
+  </ul>
+
+  <h2>3. Precios y pagos</h2>
+  <ul>
+    <li>Los precios están expresados en <strong>Guaraníes (Gs)</strong> e incluyen los impuestos aplicables, salvo indicación contraria.</li>
+    <li>Los precios y la disponibilidad pueden cambiar sin previo aviso. El precio válido es el confirmado por WhatsApp al momento del pedido.</li>
+    <li>El sitio <strong>no procesa pagos en línea</strong>. El pago se coordina directamente con nosotros (efectivo, transferencia u otros medios acordados).</li>
+  </ul>
+
+  <h2>4. Entrega y retiro</h2>
+  <p>
+    Las condiciones de entrega o retiro (zona, costo y horario) se acuerdan por WhatsApp.
+    Los tiempos son estimados y pueden variar según demanda y disponibilidad.
+  </p>
+
+  <h2>5. Productos alimenticios y alérgenos</h2>
+  <p>
+    Nuestros productos pueden contener o haber estado en contacto con leche, frutos secos,
+    gluten u otros alérgenos. Si tenés alguna alergia o restricción, consultanos antes de
+    pedir. Las imágenes son ilustrativas y pueden diferir del producto final.
+  </p>
+
+  <h2>6. Propiedad intelectual</h2>
+  <p>
+    La marca, el logotipo, los textos, imágenes y el diseño del sitio pertenecen a Yvága Açai
+    o se usan con autorización. No está permitida su reproducción sin consentimiento.
+  </p>
+
+  <h2>7. Responsabilidad</h2>
+  <p>
+    Procuramos que la información del sitio sea correcta y esté actualizada, pero no
+    garantizamos que esté libre de errores ni que el servicio esté siempre disponible.
+    En la medida permitida por la ley, no nos responsabilizamos por daños derivados del uso
+    del sitio.
+  </p>
+
+  <h2>8. Cambios</h2>
+  <p>
+    Podemos actualizar estos términos en cualquier momento. La versión vigente es la publicada
+    en esta página, con su fecha de última actualización.
+  </p>
+
+  <h2>9. Legislación y contacto</h2>
+  <p>
+    Estos términos se rigen por las leyes de la República del Paraguay. Para cualquier
+    consulta, escribinos por WhatsApp al {CONTACT.whatsappDisplay}.
+  </p>
+
+  <p class="legal-note">
+    Este documento es una base general. Te recomendamos revisarlo con un profesional legal y
+    completar los datos del responsable antes de operar comercialmente.
+  </p>
+</Legal>

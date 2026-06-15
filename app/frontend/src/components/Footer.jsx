@@ -30,6 +30,11 @@ export default function Footer() {
             </div>
           </div>
         </div>
+        <div className="ftr-legal">
+          <a href="/terminos/">Términos y Condiciones</a>
+          <a href="/privacidad/">Política de Privacidad</a>
+          <a href="/cookies/">Política de Cookies</a>
+        </div>
         <div className="ftr-bottom">
           <span>© {new Date().getFullYear()} Yvága Açai. Todos los derechos reservados.</span>
           <span>Frescura tropical, hecho en Paraguay</span>

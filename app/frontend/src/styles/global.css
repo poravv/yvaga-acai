@@ -483,3 +483,43 @@ p { margin: 0; }
 .cursor-orb.hot { width: 56px; height: 56px; }
 .cursor-orb.tap { width: 30px; height: 30px; }
 @media (hover: none), (pointer: coarse) { .cursor-orb { display: none; } }
+
+/* ===== Links legales en el footer ===== */
+.ftr-legal { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.1); display:flex; flex-wrap:wrap; gap: 10px 26px; }
+.ftr-legal a { color: rgba(255,255,255,.66); font-size: 14px; transition: color .2s; }
+.ftr-legal a:hover { color: var(--lima); }
+.ftr-legal + .ftr-bottom { margin-top: 18px; padding-top: 0; border-top: none; }
+
+/* ===== Páginas legales ===== */
+.legal-top { background: var(--acai-deep); }
+.legal-top .wrap { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-top:18px; padding-bottom:18px; }
+.legal-top .brand { font-size: 20px; }
+.legal-back { color: rgba(255,255,255,.75); font-size: 14px; font-weight:600; }
+.legal-back:hover { color: var(--lima); }
+.legal { background: var(--crema); padding: clamp(40px,7vw,80px) 0 clamp(56px,8vw,96px); }
+.legal h1 { font-size: clamp(32px,5vw,52px); color: var(--ink); }
+.legal-updated { color: var(--ink-soft); font-size: 14px; margin-top: 10px; }
+.legal-body { max-width: 760px; margin-top: 34px; }
+.legal-body h2 { font-size: clamp(20px,2.6vw,26px); color: var(--acai); margin: 34px 0 10px; }
+.legal-body p, .legal-body li { color: var(--ink-soft); font-size: 16px; line-height: 1.7; }
+.legal-body ul { padding-left: 22px; margin: 8px 0; display:grid; gap: 8px; }
+.legal-body a { color: var(--acai); text-decoration: underline; }
+.legal-body code { background: var(--crema-2); padding: 1px 6px; border-radius: 6px; font-size: 14px; color: var(--acai); }
+.legal-note { margin-top: 30px; padding: 16px 18px; background: var(--crema-2); border-radius: 14px; font-size: 14px; }
+.legal-cta { max-width: 760px; margin-top: 44px; padding-top: 28px; border-top: 1px solid rgba(29,15,36,.12); display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+.legal-cta p { color: var(--ink-soft); }
+
+/* ===== Banner de cookies ===== */
+.cookie-bar {
+  position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+  z-index: 150; width: min(680px, calc(100vw - 32px));
+  display: flex; align-items: center; gap: 16px;
+  background: rgba(20,4,30,.92); backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,.14); border-radius: 18px;
+  padding: 14px 16px; box-shadow: var(--shadow-card);
+}
+.cookie-bar p { color: rgba(255,255,255,.82); font-size: 13.5px; line-height: 1.5; }
+.cookie-bar a { color: var(--lima); text-decoration: underline; }
+.cookie-bar .btn { padding: 11px 20px; font-size: 14px; white-space: nowrap; }
+.cookie-bar[hidden] { display: none; }
+@media (max-width: 560px){ .cookie-bar { flex-direction: column; align-items: stretch; text-align: center; bottom: 12px; } .cookie-bar .btn { width: 100%; } }

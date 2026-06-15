@@ -1,0 +1,34 @@
+---
+import Base from "./Base.astro";
+import Footer from "../components/Footer.jsx";
+import { CONTACT } from "../data/catalog.js";
+
+const { title, description, updated } = Astro.props;
+---
+
+<Base title={`${title} — Yvága Açai`} description={description}>
+  <header class="legal-top">
+    <div class="wrap">
+      <a class="brand" href="/"><span class="dot"></span>Yvága <b>Açai</b></a>
+      <a class="legal-back" href="/">← Volver al inicio</a>
+    </div>
+  </header>
+
+  <main class="legal">
+    <div class="wrap">
+      <h1>{title}</h1>
+      <p class="legal-updated">Última actualización: {updated}</p>
+      <article class="legal-body">
+        <slot />
+      </article>
+      <div class="legal-cta">
+        <p>¿Dudas? Escribinos por WhatsApp.</p>
+        <a class="btn btn-wa" href={`https://wa.me/${CONTACT.whatsapp}`} target="_blank" rel="noopener">
+          Contactar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Base>
