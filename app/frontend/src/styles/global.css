@@ -116,8 +116,8 @@ p { margin: 0; }
 }
 .hdr.scrolled .hdr-inner { background: rgba(20,4,30,0.78); box-shadow: 0 20px 46px -22px rgba(0,0,0,.6); }
 .brand { display: flex; align-items: center; gap: 11px; color: #fff; font-family: var(--font-display); font-weight: 800; font-size: 21px; letter-spacing: -.02em; }
-.brand .dot { width: 34px; height: 34px; border-radius: 50%; background: radial-gradient(circle at 32% 30%, var(--acai-glow), var(--acai) 60%, var(--acai-deep)); box-shadow: inset 0 0 0 2px rgba(255,255,255,.18), 0 6px 18px -6px var(--acai-bright); position: relative; flex: none; }
-.brand .dot::after { content:""; position:absolute; top:7px; left:8px; width:8px; height:8px; border-radius:50%; background: rgba(255,255,255,.6); filter: blur(1px); }
+.brand .brand-logo { width: 64px; height: 64px; object-fit: contain; flex: none; }
+.ftr-brand .brand .brand-logo { width: 58px; height: 58px; }
 .brand b { color: var(--lima); }
 .nav { display: flex; align-items: center; gap: 4px; }
 .nav a { color: rgba(255,255,255,.82); font-size: 14.5px; font-weight: 600; padding: 9px 15px; border-radius: 100px; transition: color .2s, background .2s; }
@@ -158,6 +158,12 @@ p { margin: 0; }
 @media (max-width: 940px) {
   .nav, .hdr-actions .btn-wa { display: none; }
   .burger { display: inline-flex; }
+}
+/* En pantallas angostas el isologo + texto + carrito + burger no entran a lo ancho */
+@media (max-width: 560px) {
+  .hdr-inner { padding-left: 14px; }
+  .brand { font-size: 18px; gap: 8px; }
+  .brand .brand-logo { width: 44px; height: 44px; }
 }
 
 /* Mobile menu */
