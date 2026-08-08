@@ -30,6 +30,10 @@
   --glass-strong: rgba(255,255,255,0.16);
   --glass-border: rgba(255,255,255,0.22);
 
+  /* Alto real del navbar fijo: 18px de .hdr + 90px de .hdr-inner (logo 64 + padding 24 + borde 2).
+     El hero lo usa para no quedar tapado. Si cambia el tamaño del isologo, actualizar acá. */
+  --nav-h: 108px;
+
   --radius: 26px;
   --radius-lg: 40px;
   --shadow-soft: 0 24px 60px -24px rgba(28,4,46,0.55);
@@ -161,6 +165,7 @@ p { margin: 0; }
 }
 /* En pantallas angostas el isologo + texto + carrito + burger no entran a lo ancho */
 @media (max-width: 560px) {
+  :root { --nav-h: 90px; } /* acá el más alto ya no es el isologo (44px) sino el carrito (46px) */
   .hdr-inner { padding-left: 14px; }
   .brand { font-size: 18px; gap: 8px; }
   .brand .brand-logo { width: 44px; height: 44px; }
@@ -181,7 +186,7 @@ p { margin: 0; }
 .blob.b3 { width: 30vw; height: 30vw; background: radial-gradient(circle, var(--lima), transparent 70%); top: 40%; left: 38%; opacity:.22; }
 .hero-grain { position:absolute; inset:0; opacity:.5; mix-blend-mode: soft-light; background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px); background-size: 4px 4px; pointer-events:none; }
 
-.hero-inner { position: relative; z-index: 3; display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; padding-top: 90px; padding-bottom: 60px; }
+.hero-inner { position: relative; z-index: 3; display: grid; grid-template-columns: 1.05fr .95fr; gap: 40px; align-items: center; padding-top: calc(var(--nav-h) + 44px); padding-bottom: 60px; }
 .hero-copy h1 { font-size: clamp(46px, 7.4vw, 100px); font-weight: 800; line-height: .92; }
 .hero-copy h1 .em { color: var(--lima); display:inline-block; }
 .hero-copy h1 .gr { background: linear-gradient(100deg, var(--rosa), var(--amarillo)); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -235,7 +240,7 @@ p { margin: 0; }
 .wave-divider svg { width: 100%; height: auto; display:block; }
 
 @media (max-width: 860px) {
-  .hero-inner { grid-template-columns: 1fr; gap: 10px; text-align: center; padding-top: 110px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 10px; text-align: center; padding-top: calc(var(--nav-h) + 36px); }
   .hero-copy h1 { font-size: clamp(40px, 9vw, 64px); }
   .hero-sub { margin-left:auto; margin-right:auto; }
   .hero-cta, .hero-stats { justify-content: center; }
@@ -245,7 +250,7 @@ p { margin: 0; }
 
 /* Teléfonos: evitar desbordes del hero y mantenerlo legible */
 @media (max-width: 600px) {
-  .hero-inner { padding-top: 100px; }
+  .hero-inner { padding-top: calc(var(--nav-h) + 28px); }
   .hero-copy h1 { font-size: clamp(32px, 10.5vw, 50px); line-height: 1.02; }
   .hero-copy .kicker { font-size: 11px; letter-spacing: .12em; flex-wrap: wrap; justify-content: center; }
   .hero-sub { font-size: 16px; max-width: 34ch; }
