@@ -104,9 +104,9 @@ export const CATEGORIES = [
 export const CONTACT = {
   whatsapp: "595992424757",
   whatsappDisplay: "+595 992 424757",
-  instagram: "#",
+  instagram: "https://www.instagram.com/yvagaacai.py",
   tiktok: "#",
-  facebook: "#",
+  facebook: "https://www.facebook.com/profile.php?id=61593014733765",
   address: "Vení a buscar tu pedido — dirección a confirmar",
   hours: [
     { d: "Lunes a Viernes", h: "10:00 – 22:00" },
