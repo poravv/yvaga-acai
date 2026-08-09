@@ -105,7 +105,7 @@ export const CONTACT = {
   whatsapp: "595992424757",
   whatsappDisplay: "+595 992 424757",
   instagram: "https://www.instagram.com/yvagaacai.py",
-  tiktok: "#",
+  tiktok: "https://www.tiktok.com/@yvagaacai.py",
   facebook: "https://www.facebook.com/profile.php?id=61593014733765",
   address: "Itauguá, camino a Pirayú",
   streetAddress: "Camino a Pirayú",
