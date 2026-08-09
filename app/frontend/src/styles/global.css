@@ -139,8 +139,11 @@ p { margin: 0; }
 .btn-wa.nav-cta {
   background: linear-gradient(135deg, #25D366, #1aa851);
   color: #ffffff;
-  font-weight: 800;
-  padding-left: 10px;
+  /* 46px de alto = misma altura que .cart-btn, el control vecino. Antes medía 60px
+     y al lado de un botón de 46 se veía inflado. */
+  padding: 8px 20px 8px 8px;
+  font-size: 14.5px;
+  font-weight: 700;
   box-shadow: 0 8px 20px -12px rgba(37,211,102,.55);
 }
 .btn-wa.nav-cta:hover {
@@ -150,7 +153,7 @@ p { margin: 0; }
 }
 .btn-wa.nav-cta .nav-cta-ic {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 30px; height: 30px; border-radius: 50%;
+  width: 30px; height: 30px; border-radius: 50%; flex: none;
   background: #ffffff; color: #1aa851;
   box-shadow: 0 3px 8px -2px rgba(0,0,0,.35);
 }
