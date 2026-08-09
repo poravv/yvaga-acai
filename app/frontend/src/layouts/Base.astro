@@ -68,6 +68,10 @@ const jsonLd = {
     <link rel="apple-touch-icon" href="/favicon.png" />
     <link rel="canonical" href={canonical} />
 
+    <!-- Verificación de dominio de Meta Business. Etiqueta estática: no carga scripts
+         ni cookies. Tiene que estar en el HTML servido, no inyectada por JS. -->
+    <meta name="facebook-domain-verification" content="6uer1qeofhz9sgks7kps5viglm7onw" />
+
     <meta property="og:title" content="Yvága Açai — Açaí y helados artesanales en Itauguá" />
     <meta property="og:description" content="Açaí cremoso, helados y bowls frescos preparados al momento, sobre el camino a Pirayú. Pedí por WhatsApp." />
     <meta property="og:type" content="website" />
