@@ -56,7 +56,7 @@ export default function Hero() {
           <div className="bowl-ring" data-depth="0.2"></div>
           <div className="bowl-ring r2" data-depth="0.35"></div>
           <div className="bowl-glow" data-depth="0.4"></div>
-          <img className="bowl-product" src="/assets/acai.png" alt="Bochas de açaí Yvága" data-depth="0.5" />
+          <img className="bowl-product" src="/assets/acai.webp" alt="Bochas de açaí Yvága" data-depth="0.5" />
 
           <div className="float-chip fc-1 anim" data-depth="1.4"><Fruit.berry /></div>
           <div className="float-chip fc-2 anim d2" data-depth="1.1"><Fruit.banana /></div>

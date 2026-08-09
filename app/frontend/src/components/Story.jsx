@@ -62,10 +62,10 @@ export default function Story() {
                 </defs>
               </svg>
               <div className="glass">
-                <img className="cup-img cup-ghost" src="/assets/story/cup-ready.png" alt="" />
+                <img className="cup-img cup-ghost" src="/assets/story/cup-ready.webp" alt="" />
                 <img
                   className="cup-img cup-fill"
-                  src="/assets/story/cup-ready.png"
+                  src="/assets/story/cup-ready.webp"
                   alt="Açaí Yvága armado por capas"
                   style={{ clipPath: "url(#storyFillClip)", WebkitClipPath: "url(#storyFillClip)" }}
                 />

@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="ftr-grid">
           <div className="ftr-brand">
-            <a className="brand" href="#inicio" style={{ fontSize: 26 }}><img className="brand-logo" src="/assets/isologo.png" alt="" width="58" height="58" />Yvága <b>Açai</b></a>
+            <a className="brand" href="#inicio" style={{ fontSize: 26 }}><img className="brand-logo" src="/assets/isologo.webp" alt="" width="58" height="58" />Yvága <b>Açai</b></a>
             <p>Açaí, helados artesanales y bowls frescos preparados al momento con ingredientes naturales. El sabor tropical que te lleva al cielo.</p>
             <div className="socials" style={{ marginTop: 22 }}>
               <a className="soc" href={C.instagram} target="_blank" rel="noopener" aria-label="Instagram"><I.instagram /></a>

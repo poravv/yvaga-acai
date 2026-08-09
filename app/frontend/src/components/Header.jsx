@@ -23,7 +23,7 @@ export default function Header() {
       <header className={"hdr" + (scrolled ? " scrolled" : "")}>
         <div className="wrap">
           <div className="hdr-inner">
-            <a className="brand" href="#inicio"><img className="brand-logo" src="/assets/isologo.png" alt="" width="64" height="64" />Yvága <b>Açai</b></a>
+            <a className="brand" href="#inicio"><img className="brand-logo" src="/assets/isologo.webp" alt="" width="64" height="64" />Yvága <b>Açai</b></a>
             <nav className="nav">
               {NAV.map(([t, h]) => <a key={t} href={h}>{t}</a>)}
             </nav>
