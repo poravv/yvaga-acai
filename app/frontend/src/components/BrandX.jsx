@@ -1,4 +1,4 @@
-import { I, Fruit } from "../lib/icons.jsx";
+import { I } from "../lib/icons.jsx";
 
 const VALUES = [
   { ic: "leaf", t: "Ingredientes frescos", d: "Fruta natural y açaí de calidad, sin artificios." },
@@ -28,8 +28,13 @@ export default function BrandX() {
                 ))}
               </div>
             </div>
-            <div className="brandx-photo" style={{ background: "linear-gradient(150deg, var(--acai-bright), var(--rosa))" }}>
-              <span className="media-mark"><Fruit.leaf /></span>
+            <div className="brandx-photo">
+              <img
+                src="/assets/acai-pote.webp"
+                alt="Bowl de açaí Yvága con banana, frutilla y granola"
+                width="900"
+                height="1200"
+              />
             </div>
           </div>
         </div>
