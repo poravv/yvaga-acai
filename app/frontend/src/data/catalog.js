@@ -107,7 +107,12 @@ export const CONTACT = {
   instagram: "https://www.instagram.com/yvagaacai.py",
   tiktok: "#",
   facebook: "https://www.facebook.com/profile.php?id=61593014733765",
-  address: "Vení a buscar tu pedido — dirección a confirmar",
+  address: "Itauguá, camino a Pirayú",
+  streetAddress: "Camino a Pirayú",
+  addressLocality: "Itauguá",
+  addressRegion: "Central",
+  mapUrl: "https://maps.app.goo.gl/jVMvAzTZMS5sbe298",
+  geo: { lat: -25.4000478, lng: -57.3470665 },
   hours: [
     { d: "Lunes a Viernes", h: "10:00 – 22:00" },
     { d: "Sábados y Domingos", h: "10:00 – 23:00" },

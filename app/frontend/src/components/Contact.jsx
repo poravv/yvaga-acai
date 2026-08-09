@@ -18,10 +18,10 @@ export default function Contact() {
               <div className="ci"><I.whatsapp style={{ width: 22, height: 22 }} /></div>
               <div><b>WhatsApp</b><span>{C.whatsappDisplay}</span></div>
             </a>
-            <div className="cinfo">
+            <a className="cinfo" href={C.mapUrl} target="_blank" rel="noopener">
               <div className="ci"><I.pin style={{ width: 22, height: 22 }} /></div>
               <div><b>Dirección</b><span>{C.address}</span></div>
-            </div>
+            </a>
             <div className="cinfo">
               <div className="ci"><I.clock style={{ width: 22, height: 22 }} /></div>
               <div><b>Horarios</b>{C.hours.map((h) => <span key={h.d} style={{ display: "block" }}>{h.d}: {h.h}</span>)}</div>
@@ -35,13 +35,14 @@ export default function Contact() {
               <I.whatsapp style={{ width: 20, height: 20 }} /> Pedir ahora por WhatsApp
             </a>
           </div>
-          <div className="map-card reveal" data-d="1">
+          <a className="map-card reveal" data-d="1" href={C.mapUrl} target="_blank" rel="noopener">
             <div className="map-fallback">
               <I.pin style={{ width: 46, height: 46, margin: "0 auto 14px" }} />
               <b style={{ fontFamily: "var(--font-display)", fontSize: 22, display: "block" }}>Yvága Açai</b>
-              <p style={{ color: "rgba(255,255,255,.8)", marginTop: 8 }}>Ubicación a confirmar</p>
+              <p style={{ color: "rgba(255,255,255,.8)", marginTop: 8 }}>{C.address}</p>
+              <span className="btn btn-lima" style={{ marginTop: 18 }}>Ver en Google Maps</span>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

@@ -33,7 +33,16 @@ const jsonLd = {
   servesCuisine: ["Açaí", "Helados", "Postres"],
   priceRange: "₲₲",
   telephone: "+" + CONTACT.whatsapp,
-  address: { "@type": "PostalAddress", addressCountry: "PY", addressLocality: "Paraguay" },
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: CONTACT.streetAddress,
+    addressLocality: CONTACT.addressLocality,
+    addressRegion: CONTACT.addressRegion,
+    addressCountry: "PY",
+  },
+  geo: { "@type": "GeoCoordinates", latitude: CONTACT.geo.lat, longitude: CONTACT.geo.lng },
+  hasMap: CONTACT.mapUrl,
+  sameAs: [CONTACT.instagram, CONTACT.facebook].filter((u) => u && u !== "#"),
   openingHoursSpecification: [
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "22:00" },
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday", "Sunday"], opens: "10:00", closes: "23:00" },
