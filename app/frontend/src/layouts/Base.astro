@@ -43,10 +43,12 @@ const jsonLd = {
   geo: { "@type": "GeoCoordinates", latitude: CONTACT.geo.lat, longitude: CONTACT.geo.lng },
   hasMap: CONTACT.mapUrl,
   sameAs: [CONTACT.instagram, CONTACT.facebook].filter((u) => u && u !== "#"),
-  openingHoursSpecification: [
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "10:00", closes: "22:00" },
-    { "@type": "OpeningHoursSpecification", dayOfWeek: ["Saturday", "Sunday"], opens: "10:00", closes: "23:00" },
-  ],
+  openingHoursSpecification: CONTACT.hours.map((h) => ({
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: h.days,
+    opens: h.opens,
+    closes: h.closes,
+  })),
   hasMenu: { "@type": "Menu", hasMenuSection: menuSchema },
 };
 ---

@@ -26,7 +26,7 @@ export default function Footer() {
             <h5>Contacto</h5>
             <div className="links">
               <a href={`https://wa.me/${C.whatsapp}`} target="_blank" rel="noopener">{C.whatsappDisplay}</a>
-              <p>{C.hours.map((h) => <span key={h.d} style={{ display: "block" }}>{h.d}<br />{h.h}</span>)}</p>
+              <p>{C.hours.map((h) => <span key={h.d} style={{ display: "block" }}>{h.d}<br />{h.opens} – {h.closes}</span>)}</p>
             </div>
           </div>
         </div>

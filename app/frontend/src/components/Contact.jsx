@@ -24,7 +24,7 @@ export default function Contact() {
             </a>
             <div className="cinfo">
               <div className="ci"><I.clock style={{ width: 22, height: 22 }} /></div>
-              <div><b>Horarios</b>{C.hours.map((h) => <span key={h.d} style={{ display: "block" }}>{h.d}: {h.h}</span>)}</div>
+              <div><b>Horarios</b>{C.hours.map((h) => <span key={h.d} style={{ display: "block" }}>{h.d}: {h.opens} – {h.closes}</span>)}</div>
             </div>
             <div className="socials">
               <a className="soc" href={C.instagram} target="_blank" rel="noopener" aria-label="Instagram"><I.instagram /></a>

@@ -113,9 +113,16 @@ export const CONTACT = {
   addressRegion: "Central",
   mapUrl: "https://maps.app.goo.gl/jVMvAzTZMS5sbe298",
   geo: { lat: -25.4000478, lng: -57.3470665 },
+  // `days` alimenta el openingHoursSpecification del JSON-LD. Fuente única:
+  // antes los horarios estaban duplicados acá y en Base.astro, y se desincronizaron.
   hours: [
-    { d: "Lunes a Viernes", h: "10:00 – 22:00" },
-    { d: "Sábados y Domingos", h: "10:00 – 23:00" },
+    {
+      d: "Lunes a Sábado",
+      opens: "09:00",
+      closes: "20:00",
+      days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    },
+    { d: "Domingo", opens: "13:00", closes: "20:00", days: ["Sunday"] },
   ],
 };
 
