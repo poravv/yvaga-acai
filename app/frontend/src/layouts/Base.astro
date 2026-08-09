@@ -102,24 +102,56 @@ const jsonLd = {
 
     <div class="cookie-bar" id="cookieBar" hidden>
       <p>
-        Usamos almacenamiento local para recordar tu carrito y este aviso. No usamos cookies de
-        seguimiento. <a href="/cookies/">Más info</a>.
+        Usamos almacenamiento local para tu carrito y analítica sin cookies. Con tu permiso
+        también usaríamos cookies de <strong>Meta</strong> para medir nuestra publicidad.
+        <a href="/cookies/">Más info</a>.
       </p>
-      <button type="button" id="cookieOk" class="btn btn-lima">Entendido</button>
+      <div class="cookie-actions">
+        <button type="button" id="cookieNo" class="btn btn-ghost">Rechazar</button>
+        <button type="button" id="cookieOk" class="btn btn-lima">Aceptar</button>
+      </div>
     </div>
 
-    <script>
-      // Aviso de cookies: se muestra si no fue aceptado antes (almacenamiento local).
+    <script is:inline define:vars={{ PIXEL_ID: "1635996688137594" }}>
+      // Consentimiento + Meta Pixel.
+      //
+      // El píxel NO existe en la página hasta que la persona acepta: no basta con
+      // mostrar el aviso, el script no se inyecta si no hay consentimiento. Rechazar
+      // es tan fácil como aceptar y la decisión se puede cambiar desde /cookies/.
+      //
+      // No se incluye el <noscript><img> del snippet de Meta a propósito: se dispara
+      // sin poder consultar el consentimiento, así que sería un rastreo sin permiso.
       (() => {
+        const KEY = "yvaga_consent"; // "granted" | "denied"
+        const read = () => { try { return localStorage.getItem(KEY); } catch { return null; } };
+        const write = (v) => { try { localStorage.setItem(KEY, v); } catch {} };
+
+        function loadPixel() {
+          if (window.fbq) return;
+          /* eslint-disable */
+          !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+          n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+          document,'script','https://connect.facebook.net/en_US/fbevents.js');
+          /* eslint-enable */
+          window.fbq("init", PIXEL_ID);
+          window.fbq("track", "PageView");
+        }
+
         const bar = document.getElementById("cookieBar");
-        if (!bar) return;
-        let ok = false;
-        try { ok = localStorage.getItem("yvaga_cookie_ok") === "1"; } catch {}
-        if (!ok) bar.hidden = false;
-        document.getElementById("cookieOk")?.addEventListener("click", () => {
-          try { localStorage.setItem("yvaga_cookie_ok", "1"); } catch {}
-          bar.hidden = true;
-        });
+        const decide = (value) => { write(value); if (bar) bar.hidden = true; if (value === "granted") loadPixel(); };
+
+        // Permite volver a elegir desde la Política de Cookies.
+        window.yvagaResetConsent = () => { try { localStorage.removeItem(KEY); } catch {} if (bar) bar.hidden = false; };
+        window.yvagaConsent = read;
+
+        const current = read();
+        if (current === "granted") loadPixel();
+        else if (current !== "denied" && bar) bar.hidden = false;
+
+        document.getElementById("cookieOk")?.addEventListener("click", () => decide("granted"));
+        document.getElementById("cookieNo")?.addEventListener("click", () => decide("denied"));
       })();
     </script>
 

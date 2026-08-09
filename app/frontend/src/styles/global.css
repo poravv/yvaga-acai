@@ -534,5 +534,7 @@ p { margin: 0; }
 .cookie-bar p { color: rgba(255,255,255,.82); font-size: 13.5px; line-height: 1.5; }
 .cookie-bar a { color: var(--lima); text-decoration: underline; }
 .cookie-bar .btn { padding: 11px 20px; font-size: 14px; white-space: nowrap; }
+/* Rechazar tiene el mismo peso visual que Aceptar: un "no" escondido no es una opción real. */
+.cookie-actions { display: flex; gap: 10px; flex: none; }
 .cookie-bar[hidden] { display: none; }
-@media (max-width: 560px){ .cookie-bar { flex-direction: column; align-items: stretch; text-align: center; bottom: 12px; } .cookie-bar .btn { width: 100%; } }
+@media (max-width: 560px){ .cookie-bar { flex-direction: column; align-items: stretch; text-align: center; bottom: 12px; } .cookie-actions { flex-direction: column; } .cookie-bar .btn { width: 100%; } }

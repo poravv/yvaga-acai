@@ -26,9 +26,10 @@ import { CONTACT } from "../data/catalog.js";
       <strong>Almacenamiento local (esencial):</strong> guardamos el contenido de tu
       <em>carrito</em> (clave <code>yvaga_cart</code>) para que no se pierda al navegar o
       recargar, el <em>nombre</em> que escribís para el pedido (clave <code>yvaga_name</code>),
-      así no lo tenés que volver a cargar, y una marca de que viste este aviso (clave
-      <code>yvaga_cookie_ok</code>). Estos datos quedan solo en tu dispositivo: no se envían
-      a ningún servidor nuestro. Se borran si limpiás los datos del sitio en tu navegador.
+      así no lo tenés que volver a cargar, y tu decisión sobre las cookies de publicidad
+      (clave <code>yvaga_consent</code>). Estos datos quedan solo en tu dispositivo: no se
+      envían a ningún servidor nuestro. Se borran si limpiás los datos del sitio en tu
+      navegador.
     </li>
     <li>
       <strong>Analítica sin cookies:</strong> usamos <em>Cloudflare Web Analytics</em> para
@@ -37,8 +38,12 @@ import { CONTACT } from "../data/catalog.js";
       de navegador y el país, de forma agregada. Por eso no necesita tu consentimiento.
     </li>
     <li>
-      <strong>No usamos cookies de publicidad ni píxeles de redes sociales</strong> (Meta,
-      Google Ads u otros) en esta versión del sitio.
+      <strong>Publicidad — solo si aceptás:</strong> usamos el <em>píxel de Meta</em>
+      (Facebook e Instagram) para medir si nuestros anuncios traen clientes. Instala cookies
+      de terceros y permite que Meta reconozca tu navegador.
+      <strong>No se carga hasta que toques "Aceptar"</strong> en el aviso: si rechazás o no
+      elegís nada, el script directamente no existe en la página. Podés cambiar de opinión
+      cuando quieras desde el punto 4.
     </li>
   </ul>
 
@@ -56,21 +61,47 @@ import { CONTACT } from "../data/catalog.js";
       <strong>Cloudflare:</strong> aloja y entrega el sitio, y provee la analítica sin
       cookies mencionada arriba.
     </li>
+    <li>
+      <strong>Meta Platforms:</strong> si aceptaste la medición publicitaria, recibe datos de
+      tu visita según su
+      <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">política de privacidad</a>.
+    </li>
   </ul>
 
-  <h2>4. Cómo gestionarlas</h2>
+  <h2>4. Cambiar tu decisión</h2>
   <p>
-    Podés borrar el almacenamiento local y las cookies desde la configuración de tu navegador
-    (sección de privacidad / datos de sitios). Si borrás el almacenamiento, se vaciará tu
-    carrito.
+    Podés aceptar o rechazar la medición publicitaria cuando quieras. Rechazar no afecta en
+    nada el uso del sitio ni tu pedido.
   </p>
+  <p id="consentState" class="legal-note">Cargando tu preferencia…</p>
+  <button type="button" id="consentReset" class="btn btn-acai">Cambiar mi decisión</button>
+  <p style="margin-top:18px">
+    También podés borrar el almacenamiento local y las cookies desde la configuración de tu
+    navegador (sección de privacidad / datos de sitios). Si borrás el almacenamiento, se
+    vaciará tu carrito.
+  </p>
+
+  <script is:inline>
+    (() => {
+      const label = { granted: "Aceptaste la medición publicitaria.", denied: "Rechazaste la medición publicitaria." };
+      const el = document.getElementById("consentState");
+      const show = () => {
+        const v = window.yvagaConsent ? window.yvagaConsent() : null;
+        el.textContent = label[v] || "Todavía no elegiste. El píxel no está cargado.";
+      };
+      show();
+      document.getElementById("consentReset")?.addEventListener("click", () => {
+        window.yvagaResetConsent?.();
+        el.textContent = "Listo: elegí de nuevo en el aviso de abajo.";
+      });
+    })();
+  </script>
 
   <h2>5. Cambios</h2>
   <p>
-    Si en el futuro incorporamos cookies de publicidad o de seguimiento —por ejemplo un píxel
-    de Meta o Google Analytics— actualizaremos esta política y te pediremos tu consentimiento
-    antes de activarlas, con opción de rechazarlas. Ver también nuestra
-    <a href="/privacidad/">Política de Privacidad</a>.
+    Si incorporamos otras cookies de publicidad o de seguimiento, actualizaremos esta política
+    y te pediremos tu consentimiento antes de activarlas, con opción de rechazarlas. Ver
+    también nuestra <a href="/privacidad/">Política de Privacidad</a>.
   </p>
 
   <p class="legal-note">
