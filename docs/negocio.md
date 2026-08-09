@@ -29,12 +29,32 @@ Tipografías: **Bricolage Grotesque** (títulos) + **Plus Jakarta Sans** (texto)
 
 > Definido en `app/frontend/src/data/catalog.js` → `CONTACT`.
 
-- **WhatsApp**: +595 992 424757 (`595992424757`)
-- **Dirección**: ⚠️ *a confirmar* (placeholder actual: "Vení a buscar tu pedido — dirección a confirmar")
+- **WhatsApp**: +595 992 424757 (`595992424757`) — canal de venta principal
+- **Dirección**: Camino a Pirayú, Itauguá, Departamento Central
+  - Coordenadas: `-25.4000478, -57.3470665`
+  - Ficha de Maps: https://maps.app.goo.gl/jVMvAzTZMS5sbe298
 - **Horarios**:
-  - Lunes a Viernes: 10:00 – 22:00
-  - Sábados y Domingos: 10:00 – 23:00
-- **Redes** (⚠️ placeholders `#`, faltan URLs reales): Instagram, TikTok, Facebook.
+  - Lunes a Sábado: 09:00 – 20:00
+  - Domingo: 13:00 – 20:00
+- **Redes**:
+  - Instagram: https://www.instagram.com/yvagaacai.py
+  - Facebook: https://www.facebook.com/profile.php?id=61593014733765
+  - TikTok: https://www.tiktok.com/@yvagaacai.py
+
+### Correos del dominio
+
+Casillas disponibles en `yvaga-acai.com.py`. **Todavía no se publican en el sitio**
+ni figuran en el JSON-LD; están documentadas para tenerlas en cuenta.
+
+| Casilla | Uso previsto |
+|---|---|
+| `contacto@yvaga-acai.com.py` | Consultas generales. Es la candidata a publicarse en la web y a ir como `email` en el JSON-LD. |
+| `pedidos@yvaga-acai.com.py` | Pedidos por correo, como alternativa a WhatsApp. |
+| `administracion@yvaga-acai.com.py` | Facturación y temas administrativos. No conviene exponerla públicamente. |
+
+Pendiente de decidir: si se publica `contacto@`, agregarla a `CONTACT` en
+`catalog.js` para que la tomen la sección de contacto, el footer y el JSON-LD
+desde una sola fuente.
 
 ## Catálogo y precios (Gs)
 
@@ -101,8 +121,10 @@ Orden de capas del açaí clásico, de abajo hacia arriba (animación de relleno
 4. Açaí más liviano
 5. Leche en polvo + granola + leche condensada (capa final)
 
-Imágenes de la animación en `app/frontend/public/assets/story/`
-(`cup-empty.png`, `cup-ready.png`).
+La animación usa una sola imagen, `app/frontend/public/assets/story/cup-ready.webp`,
+en dos capas: una en escala de grises de fondo y otra a color recortada con un
+clipPath que sube con el scroll. Las capas PNG sueltas de la versión anterior se
+eliminaron por no tener referencias.
 
 ## Cómo funciona el pedido (UX)
 
