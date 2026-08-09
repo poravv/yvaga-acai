@@ -8,8 +8,8 @@ export default function Contact() {
       <div className="wrap">
         <div className="sec-head reveal">
           <span className="kicker">Hacé tu pedido</span>
-          <h2>Estamos cerca tuyo</h2>
-          <p>Pedí por WhatsApp y coordinamos la entrega o el retiro. ¡Te esperamos!</p>
+          <h2>Estamos cerca tuyo, en Itauguá</h2>
+          <p>Sobre el camino a Pirayú. Pedí por WhatsApp y coordinamos la entrega o el retiro. ¡Te esperamos!</p>
         </div>
         <div className="contact-grid">
           <div className="contact-card reveal">

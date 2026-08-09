@@ -17,7 +17,7 @@ export default function Featured() {
       <div className="wrap">
         <div className="sec-head reveal">
           <span className="kicker">Los favoritos</span>
-          <h2>Productos destacados</h2>
+          <h2>Los açaí y helados más pedidos</h2>
           <p>Lo que más piden nuestros clientes. Agregalos a tu pedido y enviá todo junto por WhatsApp.</p>
         </div>
         <div className="prod-grid">

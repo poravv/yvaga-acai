@@ -38,9 +38,9 @@ export default function Hero() {
 
       <div className="wrap hero-inner">
         <div className="hero-copy">
-          <span className="kicker on-dark reveal in">Açaí · Helados · Bowls frescos</span>
+          <span className="kicker on-dark reveal in">Açaí · Helados · Bowls frescos · Itauguá</span>
           <h1 className="reveal in" data-d="1">El sabor <span className="gr">tropical</span> que te lleva al <span className="em">cielo</span></h1>
-          <p className="hero-sub reveal in" data-d="2">Açaí, helados artesanales y bowls frescos preparados al momento con ingredientes naturales.</p>
+          <p className="hero-sub reveal in" data-d="2">Heladería artesanal en Itauguá. Açaí cremoso, helados y bowls frescos preparados al momento.</p>
           <div className="hero-cta reveal in" data-d="3">
             <a className="btn btn-lima" href="#productos">Ver productos <I.arrow style={{ width: 18, height: 18 }} /></a>
             <button className="btn btn-ghost" onClick={openCart}>Pedir ahora</button>

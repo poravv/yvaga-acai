@@ -20,7 +20,7 @@ export default function Menu() {
       <div className="wrap">
         <div className="sec-head reveal">
           <span className="kicker">Carta completa</span>
-          <h2>Nuestro menú</h2>
+          <h2>Menú de açaí, helados y postres</h2>
           <p>Todos nuestros productos con precios. Tocá <b>+</b> para sumarlos a tu pedido.</p>
         </div>
 

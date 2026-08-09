@@ -11,7 +11,7 @@ export default function Categories() {
       <div className="wrap">
         <div className="sec-head reveal">
           <span className="kicker">Explorá el menú</span>
-          <h2>Elegí tu antojo</h2>
+          <h2>Elegí tu açaí o tu helado</h2>
           <p>Desde un açaí bien cargado hasta un palito refrescante: encontrá tu categoría favorita.</p>
         </div>
         <div className="cat-grid">
