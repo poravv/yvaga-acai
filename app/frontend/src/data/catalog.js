@@ -102,8 +102,8 @@ export const CATEGORIES = [
 ];
 
 export const CONTACT = {
-  whatsapp: "595992424757",
-  whatsappDisplay: "+595 992 424757",
+  whatsapp: "595981001241",
+  whatsappDisplay: "+595 981 001241",
   instagram: "https://www.instagram.com/yvagaacai.py",
   tiktok: "https://www.tiktok.com/@yvagaacai.py",
   facebook: "https://www.facebook.com/profile.php?id=61593014733765",

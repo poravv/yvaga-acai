@@ -29,7 +29,7 @@ Tipografías: **Bricolage Grotesque** (títulos) + **Plus Jakarta Sans** (texto)
 
 > Definido en `app/frontend/src/data/catalog.js` → `CONTACT`.
 
-- **WhatsApp**: +595 992 424757 (`595992424757`) — canal de venta principal
+- **WhatsApp**: +595 981 001241 (`595981001241`) — canal de venta principal
 - **Dirección**: Camino a Pirayú, Itauguá, Departamento Central
   - Coordenadas: `-25.4000478, -57.3470665`
   - Ficha de Maps: https://maps.app.goo.gl/jVMvAzTZMS5sbe298

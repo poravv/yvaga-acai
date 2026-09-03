@@ -8,7 +8,8 @@ Estado al **2026-06-14**. Marcar `[x]` al completar.
       en `app/frontend/src/data/catalog.js` → `CONTACT.address`.
 - [ ] **URLs reales de redes** (Instagram, TikTok, Facebook) — hoy son `#`
       en `CONTACT.instagram/tiktok/facebook`.
-- [ ] **Confirmar número de WhatsApp** (+595 992 424757) y horarios.
+- [x] **Número de WhatsApp confirmado**: +595 981 001241.
+- [ ] **Confirmar horarios** del local.
 - [ ] **Completar datos del titular** en las páginas legales (razón social,
       RUC, domicilio): hoy son placeholders `[completar]` en
       `src/pages/{terminos,privacidad}.astro`. Revisar con un profesional legal.
