@@ -40,6 +40,7 @@ export default function Menu() {
           <div className="menu-list">
             {cat.items.map((it) => (
               <div className="mrow" key={it.id}>
+                {it.img && <img className="mthumb" src={it.img} alt="" loading="lazy" width="56" height="56" />}
                 <div style={{ minWidth: 0 }}>
                   <div className="mname">{it.name}</div>
                   {it.desc && <div className="mdesc">{it.desc}</div>}

@@ -31,15 +31,19 @@
 
 ### A) Açaí del Rey (pulpa cremosita y bowls)
 
-| Producto | 330 ml | 440 ml |
-|---|---|---|
-| Açaí Clásico (275 ml: 12.000) | 15.000 | — |
-| Açaí con Granola Mix | 15.000 | 20.000 |
-| Açaí con Frutas (banana, frutilla…) ⭐ *más vendido* | 20.000 | 25.000 |
-| Açaí con Toppings Completo | 20.000 | 25.000 |
+| Producto | Precio |
+|---|---|
+| Açaí 250 ml (vaso clásico) | 12.000 |
+| Açaí 330 ml (tradicional) | 15.000 |
+| Açaí con fruta 330 ml | 18.000 |
+| Açaí con fruta 400 ml ⭐ *más vendido* | 22.000 |
+| Açaí con granola mix 330 ml | 15.000 |
+| Açaí con granola mix 440 ml | 20.000 |
+| Açaí bowl 350 gr tradicional | 20.000 |
+| Açaí bowl 350 gr con fruta | 20.000 |
 
 - Vaso BigCup (frutilla, dulce de leche y chocolate): **12.000**
-- Vaso Gold: **7.000**
+- Vaso Gold: **6.000**
 
 ### B) Helados Cremosos — 15 sabores artesanales
 
@@ -62,23 +66,23 @@ Chocolate, Dulce de leche, Frutilla, Granizado, Cielo, Americana, Tramontana, Me
 | Palito Frutal | 2.000 |
 | Palito Cremosito | 3.000 |
 | Palito Chocolatoso | 4.000 |
-| Alfajor Helado | 7.000 |
+| Alfajor Helado | 6.000 |
 | Paleta Rellena | 8.000 |
 
 ### D) Tortas Heladas
 
-- Torta Helada por capas: **55.000**
+- Torta Helada por capas: **50.000**
 - Tortas a pedido: precio a consultar según diseño/tamaño.
 
 ### E) Combos / Promociones
 
 | Combo | Contenido | Precio |
 |---|---|---|
-| Tropical | Açaí con fruta 440 ml + palito frutal de regalo | 26.000 |
+| Tropical | Açaí con fruta 400 ml + palito frutal de regalo | 26.000 |
 | Pareja | 2 vasos Gold + 2 conos de 2 bochas | 22.000 |
-| Familiar | Pote de 1 kg + 4 conos a elección | 60.000 |
+| Familiar | Pote de 1 kg + 4 conos de regalo | 45.000 |
 
-**Destacados en la web** (sección FEATURED): 6 productos con badges «Más vendido», «Premium», «Nuevo» y «Para festejar».
+**Destacados en la web** (sección FEATURED): 6 productos con foto (açaí con fruta 400 ml «Más vendido», bowl 350 gr con fruta «Premium», açaí con fruta 330 ml, cono grande 3 bochas, alfajor helado y paleta rellena).
 
 ## 4. Capas del Açaí («Así armamos tu açaí»)
 

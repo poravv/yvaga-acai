@@ -63,16 +63,16 @@ Pulpa cremosa, fría y cargada de energía tropical.
 
 | Producto | Precio |
 |---|---|
-| Açaí 275 ml | 12.000 |
-| Açaí 330 ml | 15.000 |
-| Açaí con fruta 330 ml | 20.000 |
-| Açaí con fruta 440 ml | 25.000 |
+| Açaí 250 ml | 12.000 |
+| Açaí 330 ml tradicional | 15.000 |
+| Açaí con fruta 330 ml | 18.000 |
+| Açaí con fruta 400 ml | 22.000 |
 | Açaí con granola mix 330 ml | 15.000 |
 | Açaí con granola mix 440 ml | 20.000 |
-| Açaí con toppings 330 ml | 20.000 |
-| Açaí con toppings 440 ml | 25.000 |
+| Açaí bowl 350 gr tradicional | 20.000 |
+| Açaí bowl 350 gr con fruta | 20.000 |
 | Vaso BigCup (frutilla, dulce de leche, chocolate) | 12.000 |
-| Vaso Gold (frutilla, dulce de leche, chocolate) | 7.000 |
+| Vaso Gold (frutilla, dulce de leche, chocolate) | 6.000 |
 
 ### Helados cremosos
 15 sabores artesanales servidos al momento.
@@ -96,21 +96,21 @@ Tramontana, Menta, Portuguesa, Capuchino, Uva, Limón, Banana, Prestigio, Tres l
 | Palito frutal | 2.000 |
 | Palito cremosito | 3.000 |
 | Palito chocolatoso | 4.000 |
-| Alfajor helado | 7.000 |
+| Alfajor helado | 6.000 |
 | Paleta rellena | 8.000 |
 
 ### Tortas
 | Producto | Precio |
 |---|---|
-| Torta helada | 55.000 |
+| Torta helada | 50.000 |
 | Tortas a pedido | a consultar |
 
 ### Combos / Promos
 | Combo | Precio | Incluye |
 |---|---|---|
-| Combo Tropical | 26.000 | Açaí con fruta 440 ml + palito frutal de regalo |
+| Combo Tropical | 26.000 | Açaí con fruta 400 ml + palito frutal de regalo |
 | Combo Pareja | 22.000 | 2 vasos Gold + 2 conos 2 bochas |
-| Combo Familiar | 60.000 | Pote 1 kg + 4 conos a elección |
+| Combo Familiar | 45.000 | Pote 1 kg + 4 conos de regalo |
 
 ## "Así armamos tu açaí" (sección interactiva)
 

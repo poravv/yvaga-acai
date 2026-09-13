@@ -28,7 +28,9 @@ export default function Featured() {
               <article className="pcard reveal" data-d={(i % 3) + 1} key={f.ref}>
                 <div className="pcard-media" style={{ background: `linear-gradient(150deg, ${f.g1}, ${f.g2})` }}>
                   {f.badge && <span className="pcard-badge">{f.badge}</span>}
-                  <span className="media-mark"><Fruit.berry /></span>
+                  {item.img
+                    ? <img className="pcard-img" src={item.img} alt={item.name} loading="lazy" />
+                    : <span className="media-mark"><Fruit.berry /></span>}
                 </div>
                 <div className="pcard-body">
                   <h3>{item.name}</h3>
