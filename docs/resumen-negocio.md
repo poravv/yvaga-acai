@@ -38,7 +38,7 @@
 | Açaí con fruta 330 ml | 18.000 |
 | Açaí con fruta 400 ml ⭐ *más vendido* | 25.000 |
 | Açaí con granola mix 330 ml | 15.000 |
-| Açaí con granola mix 440 ml | 20.000 |
+| Açaí con granola mix 400 ml | 25.000 |
 | Açaí bowl 350 gr tradicional | 20.000 |
 | Açaí bowl 350 gr con fruta | 20.000 |
 

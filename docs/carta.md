@@ -12,7 +12,7 @@ Precios en guaraníes (Gs.).
 | Açaí con fruta 330 ml | Banana, frutilla y más | 18.000 |
 | Açaí con fruta 400 ml | Banana, frutilla y más | 25.000 |
 | Açaí con granola mix 330 ml | Crocante de granola | 15.000 |
-| Açaí con granola mix 440 ml | Crocante de granola | 20.000 |
+| Açaí con granola mix 400 ml | Crocante de granola | 25.000 |
 | Açaí bowl 350 gr | Tradicional | 20.000 |
 | Açaí bowl 350 gr con fruta | Banana, frutilla y más | 20.000 |
 | Vaso BigCup | Mezcla de frutilla, dulce de leche y chocolate | 12.000 |
