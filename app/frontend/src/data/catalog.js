@@ -17,7 +17,7 @@ export const CATALOG = [
       { id: "acai-250", name: "Açaí 250 ml", desc: "Vaso clásico", price: 12000, img: "/assets/productos/acai-frutas-250.webp" },
       { id: "acai-330", name: "Açaí 330 ml", desc: "Tradicional", price: 15000 },
       { id: "acai-fruta-330", name: "Açaí con fruta 330 ml", desc: "Banana, frutilla y más", price: 18000, img: "/assets/productos/acai-frutas-330.webp" },
-      { id: "acai-fruta-400", name: "Açaí con fruta 400 ml", desc: "Banana, frutilla y más", price: 22000, img: "/assets/productos/acai-frutas-400-ml.webp" },
+      { id: "acai-fruta-400", name: "Açaí con fruta 400 ml", desc: "Banana, frutilla y más", price: 25000, img: "/assets/productos/acai-frutas-400-ml.webp" },
       { id: "acai-granola-330", name: "Açaí con granola mix 330 ml", desc: "Crocante de granola", price: 15000 },
       { id: "acai-granola-440", name: "Açaí con granola mix 440 ml", desc: "Crocante de granola", price: 20000 },
       { id: "bowl-350", name: "Açaí bowl 350 gr", desc: "Tradicional", price: 20000, img: "/assets/productos/bowl-350gr.webp" },

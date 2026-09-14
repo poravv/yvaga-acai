@@ -66,7 +66,7 @@ Pulpa cremosa, fría y cargada de energía tropical.
 | Açaí 250 ml | 12.000 |
 | Açaí 330 ml tradicional | 15.000 |
 | Açaí con fruta 330 ml | 18.000 |
-| Açaí con fruta 400 ml | 22.000 |
+| Açaí con fruta 400 ml | 25.000 |
 | Açaí con granola mix 330 ml | 15.000 |
 | Açaí con granola mix 440 ml | 20.000 |
 | Açaí bowl 350 gr tradicional | 20.000 |
