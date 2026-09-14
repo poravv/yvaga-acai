@@ -30,7 +30,7 @@ export default function BrandX() {
             </div>
             <div className="brandx-photo">
               <img
-                src="/assets/acai-pote.webp"
+                src="/assets/acai-pote.webp?v=2"
                 alt="Bowl de açaí Yvága con banana, frutilla y granola"
                 width="900"
                 height="1200"
