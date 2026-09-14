@@ -44,7 +44,9 @@ export default function CartUI() {
             <div className="cart-items">
               {items.map((it) => (
                 <div className="citem" key={it.id}>
-                  <div className="ci-thumb" style={{ background: `linear-gradient(150deg, ${it.color}, var(--acai-deep))` }}>{it.name[0]}</div>
+                  <div className="ci-thumb" style={{ background: `linear-gradient(150deg, ${it.color}, var(--acai-deep))` }}>
+                    {it.img ? <img src={it.img} alt="" loading="lazy" /> : it.name[0]}
+                  </div>
                   <div className="ci-info">
                     <b style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{it.name}</b>
                     <span>{gs(it.price)}</span>

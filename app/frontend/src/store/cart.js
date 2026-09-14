@@ -1,14 +1,26 @@
 /* Estado global del carrito — compartido entre todas las islas React vía nanostores.
    Persiste en localStorage; seguro para SSR (guarda accesos a window). */
 import { atom, computed } from "nanostores";
-import { CONTACT } from "../data/catalog.js";
+import { CONTACT, ITEM_INDEX, PROMOS } from "../data/catalog.js";
 
 const STORAGE_KEY = "yvaga_cart";
 const NAME_KEY = "yvaga_name";
 
+const PRODUCTS = { ...ITEM_INDEX, ...Object.fromEntries(PROMOS.map((p) => [p.id, p])) };
+
+// Un carrito guardado antes de un cambio de catálogo tiene precios viejos: se toman
+// nombre, precio e imagen actuales y se descartan los productos que ya no existen,
+// para que el pedido por WhatsApp nunca salga con datos desactualizados.
+function refresh(saved) {
+  return saved.flatMap((it) => {
+    const cur = PRODUCTS[it.id];
+    return cur ? [{ ...it, name: cur.name, price: cur.price, img: cur.img }] : [];
+  });
+}
+
 function readInitial() {
   if (typeof localStorage === "undefined") return [];
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]"); } catch { return []; }
+  try { return refresh(JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]")); } catch { return []; }
 }
 function readName() {
   if (typeof localStorage === "undefined") return "";
@@ -47,7 +59,7 @@ export function add(item) {
     $items.set(next);
   } else {
     $items.set([...prev, {
-      id: item.id, name: item.name, price: item.price,
+      id: item.id, name: item.name, price: item.price, img: item.img,
       color: item.color || "var(--acai)", qty: 1,
     }]);
   }

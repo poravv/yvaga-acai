@@ -453,6 +453,7 @@ p { margin: 0; }
 .cart-empty .ce-ic { width: 84px; height:84px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; box-shadow: var(--shadow-soft); color: var(--acai-bright); }
 .citem { display:flex; gap: 14px; align-items:center; background:#fff; border-radius: 18px; padding: 14px; box-shadow: var(--shadow-soft); }
 .citem .ci-thumb { width: 52px; height:52px; border-radius: 12px; flex:none; display:flex; align-items:center; justify-content:center; color:#fff; font-family:var(--font-display); font-weight:800; }
+.citem .ci-thumb img { width:100%; height:100%; object-fit:cover; border-radius:inherit; }
 .citem .ci-info { flex:1; min-width:0; }
 .citem .ci-info b { font-size: 14.5px; display:block; line-height:1.2; }
 .citem .ci-info span { font-size: 13px; color: var(--acai); font-weight:700; }
