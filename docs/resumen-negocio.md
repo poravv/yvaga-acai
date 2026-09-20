@@ -1,6 +1,6 @@
 # 🍇 Resumen del Negocio: Yvága Açai
 
-> Actualizado: agosto 2026. Fuente de verdad de precios y datos: `app/frontend/src/data/catalog.js`.
+> Actualizado: septiembre 2026. Fuente de verdad de precios y datos: `app/frontend/src/data/catalog.js`.
 
 ## 1. Identidad y Concepto
 
