@@ -70,7 +70,7 @@ export const CATALOG = [
 // Destacados de la sección productos (ref apunta al catálogo)
 export const FEATURED = [
   { ref: "acai-fruta-400", badge: "Más vendido",
-    blurb: "Açaí con banana, frutilla y un topping a elección.", g1: "var(--acai-bright)", g2: "var(--rosa)" },
+    blurb: "Açaí con banana, frutilla y más.", g1: "var(--acai-bright)", g2: "var(--rosa)" },
   { ref: "bowl-fruta-350", badge: "Premium",
     blurb: "Bowl de 350 gr de açaí con banana, frutilla y más.", g1: "var(--acai)", g2: "var(--acai-bright)" },
   { ref: "acai-fruta-330", badge: null,
