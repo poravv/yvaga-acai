@@ -34,6 +34,7 @@ export default function Footer() {
           <a href="/terminos/">Términos y Condiciones</a>
           <a href="/privacidad/">Política de Privacidad</a>
           <a href="/cookies/">Política de Cookies</a>
+          <a href="/assets/menu-yvaga-acai.pdf?v=1" target="_blank" rel="noopener">Menú en PDF</a>
         </div>
         <div className="ftr-bottom">
           <span>© {new Date().getFullYear()} Yvága Açai. Todos los derechos reservados.</span>
