@@ -1,0 +1,91 @@
+---
+import { PROMOS, CONTACT } from "../data/catalog.js";
+
+const promo = PROMOS.find((p) => p.id === "promo-acai-corrido");
+const COLORS = ["var(--lima)", "var(--amarillo)", "var(--rosa)", "var(--acai-glow)", "#fff"];
+// Posiciones fijas en build: confeti "aleatorio" sin JS en cliente.
+const confetti = Array.from({ length: 36 }, (_, i) => ({
+  left: (i * 37) % 100,
+  delay: ((i * 7) % 20) / 10,
+  dur: 2.4 + ((i * 13) % 15) / 10,
+  rot: (i * 47) % 360,
+  color: COLORS[i % COLORS.length],
+}));
+const waUrl = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent("¡Hola! Quiero info del Açaí corrido 💜")}`;
+const reelUrl = "https://www.instagram.com/yvagaacai.py/reel/DfCrhcjDYw_/";
+const price = new Intl.NumberFormat("es-PY").format(promo.price);
+---
+
+{promo && (
+  <dialog id="promoPopup" class="pp" aria-labelledby="ppTitle">
+    <div class="pp-confetti" aria-hidden="true">
+      {confetti.map((c) => (
+        <i style={`left:${c.left}%;background:${c.color};animation-delay:${c.delay}s;animation-duration:${c.dur}s;--r:${c.rot}deg`} />
+      ))}
+    </div>
+    <div class="pp-body">
+    <button type="button" class="pp-close" aria-label="Cerrar promo" data-close>✕</button>
+    <span class="pp-tag">🎉 Promo nueva</span>
+    <h2 id="ppTitle">¡{promo.name}!</h2>
+    <p class="pp-price">{price} Gs <small>por persona</small></p>
+    <p class="pp-desc">{promo.desc}</p>
+    <p class="pp-note">Solo en el local · Itauguá, camino a Pirayú</p>
+    <div class="pp-actions">
+      <a href={waUrl} class="pp-cta pp-wa" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <a href={reelUrl} class="pp-cta pp-ig" target="_blank" rel="noopener">▶ Ver el video en Instagram</a>
+    </div>
+    </div>
+  </dialog>
+)}
+
+<style>
+  .pp { border: 0; padding: 0; width: min(420px, calc(100% - 32px)); border-radius: var(--radius);
+    background: linear-gradient(150deg, var(--acai), var(--acai-bright)); color: #fff; text-align: center;
+    box-shadow: var(--shadow-card); overflow: hidden; }
+  .pp-body { position: relative; z-index: 1; padding: 40px 28px 28px; }
+  .pp::backdrop { background: rgba(22, 4, 31, .6); backdrop-filter: blur(4px); }
+  .pp[open] { animation: pp-pop .45s cubic-bezier(.2, 1.4, .4, 1); }
+  .pp-close { position: absolute; top: 12px; right: 12px; width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid var(--glass-border); background: var(--glass); color: #fff; font-size: 16px; cursor: pointer; }
+  .pp-tag { display: inline-block; padding: 6px 14px; border-radius: 100px; background: var(--lima); color: var(--ink);
+    font-size: 12px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+  .pp h2 { font-family: var(--font-display); font-size: 38px; margin: 14px 0 6px; }
+  .pp-price { font-family: var(--font-display); font-size: 34px; font-weight: 800; color: var(--amarillo); margin: 0; }
+  .pp-price small { font-size: 14px; color: #fff; font-weight: 600; }
+  .pp-desc { margin: 12px 0 4px; line-height: 1.5; }
+  .pp-note { font-size: 13px; opacity: .8; margin: 0 0 22px; }
+  .pp-actions { display: grid; gap: 10px; }
+  .pp-cta { display: block; padding: 14px 20px; border-radius: 100px; font-weight: 800; text-decoration: none; }
+  .pp-wa { background: #25d366; color: #fff; }
+  .pp-ig { background: #fff; color: var(--acai); }
+  .pp-confetti { position: absolute; inset: 0; pointer-events: none; }
+  .pp-confetti i { position: absolute; top: -12px; width: 8px; height: 14px; border-radius: 2px; opacity: 0;
+    animation: pp-fall linear 2 forwards; }
+  @keyframes pp-fall {
+    0% { opacity: 1; transform: translateY(0) rotate(var(--r)); }
+    100% { opacity: 0; transform: translateY(520px) rotate(calc(var(--r) + 540deg)); }
+  }
+  @keyframes pp-pop { from { opacity: 0; transform: scale(.85); } }
+  @media (prefers-reduced-motion: reduce) {
+    .pp[open] { animation: none; }
+    .pp-confetti { display: none; }
+  }
+</style>
+
+<script>
+  // ponytail: una vez por visita (sessionStorage), sin cookies ni consentimiento.
+  const dlg = document.getElementById("promoPopup") as HTMLDialogElement | null;
+  const KEY = "yvaga_promo_visto";
+  let isSeen = false;
+  try { isSeen = sessionStorage.getItem(KEY) === "1"; } catch {}
+  if (dlg && !isSeen) {
+    setTimeout(() => {
+      dlg.showModal();
+      try { sessionStorage.setItem(KEY, "1"); } catch {}
+    }, 2000);
+    dlg.addEventListener("click", (e) => {
+      const t = e.target as HTMLElement;
+      if (t === dlg || t.closest("[data-close]")) dlg.close();
+    });
+  }
+</script>
