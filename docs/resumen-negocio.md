@@ -15,8 +15,7 @@
   - Coordenadas: `-25.4000478, -57.3470665`
   - Mapa: https://maps.app.goo.gl/jVMvAzTZMS5sbe298
 - **Horarios**:
-  - Lunes a Sábado: 09:00 a 20:00 hs.
-  - Domingos: 13:00 a 20:00 hs.
+  - Lunes a Domingo: 13:00 a 21:00 hs.
 - **Canal principal de venta**: venta directa en local (takeaway/consumo) y pedidos por WhatsApp (**+595 981 001241**). La web genera un carrito interactivo que envía el pedido pre-formateado (con nombre del cliente) al WhatsApp del comercio.
 - **Redes sociales**:
   - Instagram: [@yvagaacai.py](https://instagram.com/yvagaacai.py)

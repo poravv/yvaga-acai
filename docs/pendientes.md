@@ -9,7 +9,7 @@ Estado al **2026-06-14**. Marcar `[x]` al completar.
 - [ ] **URLs reales de redes** (Instagram, TikTok, Facebook) — hoy son `#`
       en `CONTACT.instagram/tiktok/facebook`.
 - [x] **Número de WhatsApp confirmado**: +595 981 001241.
-- [ ] **Confirmar horarios** del local.
+- [x] **Confirmar horarios** del local (lunes a domingo 13:00–21:00, nov 2026).
 - [ ] **Completar datos del titular** en las páginas legales (razón social,
       RUC, domicilio): hoy son placeholders `[completar]` en
       `src/pages/{terminos,privacidad}.astro`. Revisar con un profesional legal.

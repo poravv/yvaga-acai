@@ -24,6 +24,7 @@ export const CATALOG = [
       { id: "bowl-fruta-350", name: "Açaí bowl 350 gr con fruta", desc: "Banana, frutilla y más", price: 20000, img: "/assets/productos/bowl-350gr.webp" },
       { id: "bigcup", name: "Vaso BigCup", desc: "Mezcla de frutilla, dulce de leche y chocolate", price: 12000 },
       { id: "gold", name: "Vaso Gold", desc: "Mezcla de frutilla, dulce de leche y chocolate", price: 6000 },
+      { id: "camadinha", name: "Camadinha de açaí", desc: "Capas de açaí, fruta fresca y cremita", price: null },
     ],
   },
   {
@@ -40,6 +41,7 @@ export const CATALOG = [
       { id: "pote-14", name: "Pote 1/4", desc: "Para llevar", price: 15000 },
       { id: "pote-12", name: "Pote 1/2", desc: "Para compartir", price: 25000 },
       { id: "pote-1k", name: "Pote 1 kg", desc: "Para toda la familia", price: 45000 },
+      { id: "milkshake-frutilla", name: "Milkshake de frutilla", desc: "Cremoso y bien frío", price: null },
     ],
   },
   {
@@ -85,6 +87,9 @@ export const FEATURED = [
 
 // Combos sugeridos (promociones)
 export const PROMOS = [
+  // inStore: promo solo para consumir en el local, sin botón de carrito.
+  { id: "promo-acai-corrido", name: "Açaí corrido", price: 50000, inStore: true,
+    desc: "Açaí, helado y toppings libres. Jueves y viernes de 17:00 a 19:00 hs.", tag: "Por persona", g1: "var(--acai)", g2: "var(--acai-bright)" },
   { id: "promo-tropical", name: "Combo Tropical", price: 26000,
     desc: "Açaí con fruta 400 ml + palito frutal de regalo.", tag: "Tropical", g1: "var(--acai-bright)", g2: "var(--rosa)" },
   { id: "promo-pareja", name: "Combo Pareja", price: 22000,
@@ -117,12 +122,11 @@ export const CONTACT = {
   // antes los horarios estaban duplicados acá y en Base.astro, y se desincronizaron.
   hours: [
     {
-      d: "Lunes a Sábado",
-      opens: "09:00",
-      closes: "20:00",
-      days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      d: "Lunes a Domingo",
+      opens: "13:00",
+      closes: "21:00",
+      days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     },
-    { d: "Domingo", opens: "13:00", closes: "20:00", days: ["Sunday"] },
   ],
 };
 

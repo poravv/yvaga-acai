@@ -28,11 +28,11 @@ export default function Promos() {
               <p>{p.desc}</p>
               <div className="pfoot">
                 <div className="pprice">{gs(p.price)}</div>
-                <button className={"add-btn" + (added[p.id] ? " added" : "")} style={{ background: "#fff", color: "var(--acai)" }} onClick={() => onAdd(p)}>
+                {p.inStore ? <span className="ptag" style={{ position: "static" }}>Solo en el local</span> : <button className={"add-btn" + (added[p.id] ? " added" : "")} style={{ background: "#fff", color: "var(--acai)" }} onClick={() => onAdd(p)}>
                   {added[p.id]
                     ? <><I.check style={{ width: 16, height: 16 }} /> Agregado</>
                     : <><I.plus style={{ width: 16, height: 16 }} /> Agregar</>}
-                </button>
+                </button>}
               </div>
             </div>
           ))}

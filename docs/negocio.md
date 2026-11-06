@@ -34,8 +34,7 @@ Tipografías: **Bricolage Grotesque** (títulos) + **Plus Jakarta Sans** (texto)
   - Coordenadas: `-25.4000478, -57.3470665`
   - Ficha de Maps: https://maps.app.goo.gl/jVMvAzTZMS5sbe298
 - **Horarios**:
-  - Lunes a Sábado: 09:00 – 20:00
-  - Domingo: 13:00 – 20:00
+  - Lunes a Domingo: 13:00 – 21:00
 - **Redes**:
   - Instagram: https://www.instagram.com/yvagaacai.py
   - Facebook: https://www.facebook.com/profile.php?id=61593014733765
@@ -73,6 +72,7 @@ Pulpa cremosa, fría y cargada de energía tropical.
 | Açaí bowl 350 gr con fruta | 20.000 |
 | Vaso BigCup (frutilla, dulce de leche, chocolate) | 12.000 |
 | Vaso Gold (frutilla, dulce de leche, chocolate) | 6.000 |
+| Camadinha de açaí | a consultar |
 
 ### Helados cremosos
 15 sabores artesanales servidos al momento.
@@ -89,6 +89,7 @@ Tramontana, Menta, Portuguesa, Capuchino, Uva, Limón, Banana, Prestigio, Tres l
 | Pote 1/4 | 15.000 |
 | Pote 1/2 | 25.000 |
 | Pote 1 kg | 45.000 |
+| Milkshake de frutilla | a consultar |
 
 ### Palitos & Paletas
 | Producto | Precio |
@@ -108,6 +109,7 @@ Tramontana, Menta, Portuguesa, Capuchino, Uva, Limón, Banana, Prestigio, Tres l
 ### Combos / Promos
 | Combo | Precio | Incluye |
 |---|---|---|
+| Açaí corrido (solo en el local) | 50.000 por persona | Açaí, helado y toppings libres. Jueves y viernes 17:00–19:00 |
 | Combo Tropical | 26.000 | Açaí con fruta 400 ml + palito frutal de regalo |
 | Combo Pareja | 22.000 | 2 vasos Gold + 2 conos 2 bochas |
 | Combo Familiar | 45.000 | Pote 1 kg + 4 conos de regalo |
